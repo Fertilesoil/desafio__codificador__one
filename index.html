@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <main class="conteudo__principal">
+    <!-- <img class="image" src="assets/wireframe.jpg" alt=""> -->
+    <aside class="cabecalho" aria-label="aside__esquerdo">
+      <img src="assets/logo.svg" id="logo" alt="Logo">
+      <span>Codificador</span>
+      <div class="fundo"></div>
+    </aside>
+
+
+    <section class="conteudo__central">
+      <textarea id="text__area__conteudo" oninput="revelaTexto()"
+        placeholder="Passe um texto aqui, vamos tratá-lo..."></textarea>
+
+      <div class="area__botoes">
+        <span><i><img src="assets/warning.svg" alt=""></i>
+          <p class="aviso">Apenas letras minúsculas e sem acento</p>
+        </span>
+        <div class="botoes">
+          <button>
+            Criptografar
+          </button>
+          <button>
+            Descriptografar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="lateral" aria-label="aside__direito">
+      <img src="assets/waiting.jpg" id="wait" alt="">
+      <h3>Nenhuma mensagem encontrada</h3>
+      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
