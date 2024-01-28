@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,7 +12,6 @@
 <body>
 
   <main class="conteudo__principal">
-    <!-- <img class="image" src="assets/wireframe.jpg" alt=""> -->
     <aside class="cabecalho" aria-label="aside__esquerdo">
       <img src="assets/logo.svg" id="logo" alt="Logo">
       <span>Codificador</span>
@@ -29,10 +28,10 @@
           <p class="aviso">Apenas letras minúsculas e sem acento</p>
         </span>
         <div class="botoes">
-          <button>
+          <button id="btn__cripto">
             Criptografar
           </button>
-          <button>
+          <button id="btn__decripto">
             Descriptografar
           </button>
         </div>
@@ -44,6 +43,15 @@
       <h3>Nenhuma mensagem encontrada</h3>
       <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
     </aside>
+
+    <!-- <aside class="render__aside" aria-label="aside__resultado">
+      <div id="criptografia">
+      <a id="link-text"></a>
+      </div>
+      <button class="copiar">
+      Copiar
+      </button>
+      </aside> -->
   </main>
 
   <script src="app.js"></script>

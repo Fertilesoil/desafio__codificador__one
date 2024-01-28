@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500&display=swap');
 
 :root {
   --bg-color: #F3F5FC;
@@ -9,7 +10,7 @@
   --btn-focused-color: #e097d9;
   --bg-color-aside: #fff;
   --input-font: 'Outfit', sans-serif;
-  --output-font: 'IBM Plex Mono', monospace;
+  --output-font: 'Work Sans', sans-serif;
   --color-text-h3-aside: #343a40;
   --color-text-p-aside: #495057;
 }
@@ -81,7 +82,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  /* margin-right: 7rem; */
 }
 
 .area__botoes {
@@ -176,6 +176,7 @@ button:nth-child(2):hover {
   text-align: justify;
   overflow: auto;
   padding: 0.9rem 0.7rem 0.9rem 0.9rem;
+  caret-color: var(--btn-color);
   z-index: 10;
 }
 
@@ -203,7 +204,7 @@ button:nth-child(2):hover {
 }
 
 #logo {
-  z-index: 10;
+  z-index: 20;
   width: 4rem;
   height: 4rem;
   opacity: 0.3;
@@ -212,7 +213,7 @@ button:nth-child(2):hover {
 }
 
 #logo:hover {
-  z-index: 10;
+  z-index: 20;
   transition: 500ms ease-in-out;
   transform: translateY(1rem);
   opacity: 1;
@@ -241,11 +242,6 @@ button:nth-child(2):hover {
   gap: 2rem;
   z-index: 10;
 }
-
-/* width: 20.5rem;
-  margin-left: 5rem;
-  position: absolute;
-  right: -6px; */
 
 h3 {
   z-index: 10;
@@ -283,16 +279,61 @@ h3 {
 }
 
 #criptografia {
-  overflow: hidden;
+  overflow: auto;
   resize: none;
   width: 20rem;
   height: 25rem;
   font-family: var(--output-font);
   text-align: left;
   color: var(--output-font-color);
-  font-size: 1rem;
-  padding: 0.4rem;
+  font-size: 1.2rem;
+  word-spacing: 0.3rem;
+  text-indent: 0.5rem;
+  padding: 0.9rem 0.7rem 0.9rem 0.9rem;
   border: none;
+  word-break: break-word;
+  text-wrap: pretty;
+  line-height: 1.2lh;
+  z-index: 10;
+}
+
+#criptografia::-webkit-scrollbar {
+  z-index: 10;
+  width: 0.3rem;
+  border-radius: 2rem;
+  background-color: transparent
+}
+
+#criptografia::-webkit-scrollbar-thumb {
+  z-index: 10;
+  background-color: var(--btn-focused-color);
+  border-radius: 0.2rem;
+}
+
+#link-text {
+  text-decoration: none;
+  background-image: 
+  linear-gradient(90deg, #d56aceab, #e097d9a1, #e097d942);
+  background-size: 0% 18px;
+  background-repeat: no-repeat;
+  background-position: left 0.6em;
+  padding-block: .38em;
+  transition: background-size 550ms,
+              color 500ms;
+  padding-inline: 0.3rem 0.3rem;
+}
+
+#link-text:hover {
+  background-size: 100% 18px;
+  color: #205b6d;
+}
+
+#link-text::selection {
+  background-color: white;
+}
+
+#criptografia::selection {
+  background-color: white;
 }
 
 .copiar {
@@ -302,17 +343,10 @@ h3 {
   padding: 1rem 3rem;
   border-radius: 1rem;
   transition: transform 0.4s ease,
-    backgroun-color 0.4s linear;
+    backgroun-color 400ms linear;
   cursor: pointer;
   font-family: var(--input-font);
   font-weight: 500;
   font-size: 0.9rem;
   z-index: 10;
 }
-/* 
-.image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  filter: blur(0.15rem);
-} */
