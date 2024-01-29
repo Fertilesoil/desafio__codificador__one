@@ -1,4 +1,13 @@
-﻿// function revelaTexto() {
+﻿import { templateVazio } from "./app";
+
+const template = document.querySelector('.section__template')
+const resultado = document.querySelector('.section__resultado')
+
+templateVazio()
+
+
+
+// function revelaTexto() {
 //   const text = document.getElementById('text__area__conteudo')
 //   const output = document.querySelector('.lateral')
 //   const p = document.querySelector('.aviso')

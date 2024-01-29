@@ -20,7 +20,7 @@
 
 
     <section class="conteudo__central">
-      <textarea id="text__area__conteudo" oninput="revelaTexto()"
+      <textarea id="text__area__conteudo" 
         placeholder="Passe um texto aqui, vamos tratá-lo..."></textarea>
 
       <div class="area__botoes">
@@ -39,22 +39,25 @@
     </section>
 
     <aside class="lateral" aria-label="aside__direito">
-      <img src="assets/waiting.jpg" id="wait" alt="">
-      <h3>Nenhuma mensagem encontrada</h3>
-      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <section class="section__template">
+        <img class="img__template" src="assets/waiting.jpg" id="wait" alt="">
+        <h3 class="h3__template">Nenhuma mensagem encontrada</h3>
+        <p class="p__template">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </section>
+
+      <section class="section__resultado">
+        <div id="criptografia">
+          <a id="link-text"></a>
+        </div>
+        <button class="copiar">
+          Copiar
+        </button>
+      </section>
     </aside>
 
-    <!-- <aside class="render__aside" aria-label="aside__resultado">
-      <div id="criptografia">
-      <a id="link-text"></a>
-      </div>
-      <button class="copiar">
-      Copiar
-      </button>
-      </aside> -->
   </main>
 
-  <script src="app.js"></script>
+  <script src="app.js" type="module"></script>
 </body>
 
 </html>
