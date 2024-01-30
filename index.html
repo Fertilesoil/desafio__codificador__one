@@ -5,8 +5,12 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Encriptador</title>
+  <meta name="description" content="O aplicativo tem como objetivo encriptar e 
+  descriptar textos com uma lógica única. Desenvolvido para o desafio ONE da alura">
 </head>
 
 <body>
@@ -21,11 +25,10 @@
 
 
     <section class="conteudo__central">
-      <textarea id="text__area__conteudo"
-        placeholder="Passe um texto aqui, vamos tratá-lo..."> </textarea>
+      <textarea id="text__area__conteudo" placeholder="Passe um texto aqui, vamos tratá-lo..."> </textarea>
 
       <div class="area__botoes">
-        <span><i><img src="assets/warning.svg" alt=""></i>
+        <span class="span__aviso"><i><img src="assets/warning.svg" alt=""></i>
           <p class="aviso">Apenas letras minúsculas e sem acento</p>
         </span>
         <div class="botoes">
@@ -38,6 +41,7 @@
         </div>
       </div>
     </section>
+    
 
     <aside class="lateral" aria-label="aside__direito">
       <section class="section__template">
