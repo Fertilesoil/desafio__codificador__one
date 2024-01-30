@@ -5,7 +5,6 @@
   copiar.addEventListener('click', () => {
     let texto = link.textContent
     navigator.clipboard.writeText(texto).then(() => {
-      console.log('Copiado!');
     })
   })
 }
