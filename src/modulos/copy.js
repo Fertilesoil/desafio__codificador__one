@@ -1,7 +1,6 @@
-﻿export function copia() {
-  const copiar = document.querySelector('.copiar')
-  const link = document.querySelector('#link-text')
+﻿import { copiar, link } from "../utils/frequent"
 
+export function copia() {
   copiar.addEventListener('click', () => {
     let texto = link.textContent
     navigator.clipboard.writeText(texto).then(() => {

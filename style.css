@@ -365,7 +365,7 @@ button:nth-child(2):hover {
 }
 
 .btn__troca {
-  display: none;
+  display: flex;
 }
 
 @media screen and (width <= 1500px) {

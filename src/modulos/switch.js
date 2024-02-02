@@ -1,10 +1,8 @@
-﻿const alternador = document.querySelector('.btn__troca')
+﻿import { alternador, tag, body, script } from "../utils/frequent"
 
 export function alternarModoLive() {
  alternador.addEventListener('click', () => {
-  const tag = document.createElement('script')
-  const body = document.querySelector('body')
-  const script = document.querySelectorAll('script')
+
 
   tag.setAttribute('type', 'module')
   tag.setAttribute('src', 'live.js')

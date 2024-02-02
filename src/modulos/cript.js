@@ -1,5 +1,6 @@
 ﻿import { limpaTextArea, templateAtivo } from './activeTemplate'
 import { templateVazio } from './emptyTemplate'
+import { text, botaoDecriptoEscutador, botaoCriptoEscutador } from '../utils/frequent'
 
 export function encriptar(texto) {
   if (!texto) return templateVazio()
@@ -56,7 +57,6 @@ function decriptarLive(texto) {
 }
 
 export function textoLive() {
-  const text = document.getElementById('text__area__conteudo');
   text.addEventListener('keyup', () => {
     let recebidos = text.value
 
@@ -65,7 +65,6 @@ export function textoLive() {
 }
 
 export function textoLiveDecripto() {
-  const text = document.getElementById('text__area__conteudo');
   text.addEventListener('keyup', () => {
     let recebidos = text.value
 
@@ -74,8 +73,7 @@ export function textoLiveDecripto() {
 }
 
 export function botaoCripto() {
-  const botaoCripto = document.querySelector('#btn__cripto')
-  botaoCripto.addEventListener('click', () => {
+  botaoCriptoEscutador.addEventListener('click', () => {
     let texto = document.querySelector('#text__area__conteudo')
     let recebidos = texto.value
 
@@ -84,8 +82,7 @@ export function botaoCripto() {
 }
 
 export function botaoDecripto() {
-  const botaoDecripto = document.querySelector('#btn__decripto')
-  botaoDecripto.addEventListener('click', () => {
+  botaoDecriptoEscutador.addEventListener('click', () => {
     let texto = document.querySelector('#text__area__conteudo')
     let recebidos = texto.value
 
@@ -94,9 +91,8 @@ export function botaoDecripto() {
 }
 
 export function botaoLive() {
-  const botaoCripto = document.querySelector('#btn__cripto')
-  botaoCripto.setAttribute('disabled', true)
-  botaoCripto.style.pointerEvents = 'none'
-  botaoCripto.style.backgroundColor = 'grey'
-  botaoCripto.style.color = '#f7f7f7'
+  botaoCriptoEscutador.setAttribute('disabled', true)
+  botaoCriptoEscutador.style.pointerEvents = 'none'
+  botaoCriptoEscutador.style.backgroundColor = 'grey'
+  botaoCriptoEscutador.style.color = '#f7f7f7'
 }

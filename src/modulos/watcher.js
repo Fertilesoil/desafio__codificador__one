@@ -1,6 +1,6 @@
-﻿export function corretor() {
- const text = document.getElementById('text__area__conteudo');
+﻿import { text, p } from "../utils/frequent"
 
+export function corretor() {
  text.addEventListener('keypress', (e) => {
 
   if (checar(e)) {
@@ -21,9 +21,6 @@ function checar(e) {
 }
 
 function textAreaErro() {
- const text = document.getElementById('text__area__conteudo');
- const p = document.querySelector('.aviso')
-
  p.innerHTML = `
   <span class="aviso__erro">Apenas letras minúsculas e sem acento</span>
   `
