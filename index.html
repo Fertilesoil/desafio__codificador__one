@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="other.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,50 +16,52 @@
 <body>
 
   <main class="conteudo__principal">
-    <aside class="cabecalho" aria-label="aside__esquerdo">
+    <header class="cabecalho" aria-label="aside__esquerdo">
       <img src="./src/assets/logo.svg" id="logo" alt="Logo">
       <span>Codificador</span>
       <div class="fundo"></div>
       <button class="btn__troca">Live</button>
-    </aside>
+    </header>
 
+    <div class="meiuca">
+      <section class="conteudo__central tetarea">
+        <textarea id="text__area__conteudo" placeholder="Passe um texto aqui, vamos tratá-lo..."> </textarea>
 
-    <section class="conteudo__central">
-      <textarea id="text__area__conteudo" placeholder="Passe um texto aqui, vamos tratá-lo..."> </textarea>
-
-      <div class="area__botoes">
-        <span class="span__aviso"><i><img src="assets/warning.svg" alt=""></i>
-          <p class="aviso">Apenas letras minúsculas e sem acento</p>
-        </span>
-        <div class="botoes">
-          <button id="btn__cripto">
-            Criptografar
-          </button>
-          <button id="btn__decripto">
-            Descriptografar
-          </button>
+        <div class="area__botoes">
+          <span class="span__aviso">
+            <p class="aviso">Apenas letras minúsculas e sem acento</p>
+          </span>
+          <div class="botoes">
+            <button id="btn__cripto">
+              Criptografar
+            </button>
+            <button id="btn__decripto">
+              Descriptografar
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
-    
-
-    <aside class="lateral" aria-label="aside__direito">
-      <section class="section__template">
-        <img class="img__template" src="src/assets/waiting.jpg" id="wait" alt="">
-        <h3 class="h3__template">Nenhuma mensagem encontrada</h3>
-        <p class="p__template">Digite um texto que você deseja criptografar ou descriptografar.</p>
       </section>
 
-      <section class="section__resultado">
-        <div id="criptografia">
-          <a id="link-text"></a>
-        </div>
-        <button class="copiar">
-          Copiar
-        </button>
-      </section>
-    </aside>
 
+      <aside class="lateral resultado" aria-label="aside__direito">
+
+        <section class="section__template">
+          <img class="img__template" src="src/assets/waiting.jpg" id="wait" alt="">
+          <h3 class="h3__template">Nenhuma mensagem encontrada</h3>
+          <p class="p__template">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </section>
+
+        <section class="section__resultado">
+          <div id="criptografia">
+            <a id="link-text"></a>
+          </div>
+          <button class="copiar">
+            Copiar
+          </button>
+        </section>
+
+      </aside>
+    </div>
   </main>
 
   <script id="sincrono" src="app.js" type="module"></script>

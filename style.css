@@ -102,9 +102,6 @@ main {
   margin-bottom: 0.1rem;
   transform: translateX(0.2rem) 1s ease;
   font-size: 1.02rem;
-  /* transition: translateX 300ms ease,
-              color 300ms ease,
-              font-size 300ms ease; */
   transition: translateX 1s ease,
     color 1s ease,
     font-size 1s ease;

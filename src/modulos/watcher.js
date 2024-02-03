@@ -12,7 +12,7 @@ export function corretor() {
 function checar(e) {
  const caracter = String.fromCharCode(e.keyCode)
 
-  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$/
+  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
 
  if (caracter.match(regex)) {
   textAreaErro()
@@ -22,7 +22,7 @@ function checar(e) {
 
 function textAreaErro() {
  p.innerHTML = `
-  <span class="aviso__erro">Apenas letras minúsculas e sem acento</span>
+  <p class="aviso__erro">Apenas letras minúsculas e sem acento</p>
   `
  text.classList.add('text__area__erro')
  setTimeout(() => {
