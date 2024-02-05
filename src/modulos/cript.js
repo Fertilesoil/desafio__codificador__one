@@ -1,5 +1,5 @@
-﻿import { limpaTextArea, templateAtivo } from './activeTemplate'
-import { templateVazio } from './emptyTemplate'
+﻿import { limpaTextArea, templateAtivo, templateAtivoLive } from './activeTemplate'
+import { templateVazio, templateVazioLive } from './emptyTemplate'
 import { text, botaoDecriptoEscutador, botaoCriptoEscutador } from '../utils/frequent'
 
 export function encriptar(texto) {
@@ -31,7 +31,7 @@ export function decriptar(texto) {
 }
 
 function encriptarLive(texto) {
-  if (!texto) return templateVazio()
+  if (!texto) return templateVazioLive()
 
   let cripto = texto
     .replace(/i/g, 'imes')
@@ -40,21 +40,22 @@ function encriptarLive(texto) {
     .replace(/o/g, 'ober')
     .replace(/u/g, 'ufat')
 
-  templateAtivo(cripto)
+  templateAtivoLive(cripto)
 }
 
-function decriptarLive(texto) {
-  if (!texto) return templateVazio()
+// export function decriptarLive(texto) {
+//   if (!texto) return templateVazioLive()
 
-  let cripto = texto
-    .replace(/i/g, 'imes')
-    .replace(/a/g, 'ai')
-    .replace(/e/g, 'enter')
-    .replace(/o/g, 'ober')
-    .replace(/u/g, 'ufat')
-
-  templateAtivo(cripto)
-}
+//   let cripto = texto
+//     .replace(/i/g, 'imes')
+//     .replace(/a/g, 'ai')
+//     .replace(/e/g, 'enter')
+//     .replace(/o/g, 'ober')
+//     .replace(/u/g, 'ufat')
+  
+//   templateAtivoLive(cripto)
+//   return texto
+// }
 
 export function textoLive() {
   text.addEventListener('keyup', () => {

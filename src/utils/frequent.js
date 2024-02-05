@@ -1,4 +1,5 @@
-﻿export  const template = document.querySelector('.section__template')
+﻿export const template = document.querySelector('.section__template')
+export const templateLive = document.querySelector('.section__template__live')
 export const resultado = document.querySelector('.section__resultado')
 export const link = document.querySelector('#link-text')
 export const text = document.getElementById('text__area__conteudo')

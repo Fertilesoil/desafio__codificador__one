@@ -1,4 +1,4 @@
-﻿import { templateVazio } from "./emptyTemplate"
+﻿import { templateVazio, templateVazioLive } from "./emptyTemplate"
 import { text } from "../utils/frequent"
 
 export function restauraPadrao() {
@@ -6,6 +6,15 @@ export function restauraPadrao() {
     let enxergaTexto = text.value
     if (enxergaTexto === '') {
       templateVazio()
+    }
+  })
+}
+
+export function restauraPadraoLive() {
+  text.addEventListener('input', () => {
+    let enxergaTexto = text.value
+    if (enxergaTexto === '') {
+      templateVazioLive()
     }
   })
 }

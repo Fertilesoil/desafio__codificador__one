@@ -1,14 +1,14 @@
 ﻿import { textoLive, botaoDecripto, textoLiveDecripto, bloquearBotaoLive } from "./src/modulos/cript";
-import { copia } from "./src/modulos/copy";
-import { restauraPadrao } from "./src/modulos/ensureDefault";
-import { templateVazio } from "./src/modulos/emptyTemplate";
+import { copia, copiaLive } from "./src/modulos/copy";
+import { restauraPadraoLive } from "./src/modulos/ensureDefault";
+import { templateVazio, templateVazioLive } from "./src/modulos/emptyTemplate";
 import { corretor } from "./src/modulos/watcher";
 
-restauraPadrao()
-templateVazio()
+restauraPadraoLive()
+templateVazioLive()
 textoLive()
 textoLiveDecripto()
-copia()
+copiaLive()
 botaoDecripto()
 bloquearBotaoLive()
 corretor()
