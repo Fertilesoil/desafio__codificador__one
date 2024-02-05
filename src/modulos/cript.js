@@ -90,9 +90,14 @@ export function botaoDecripto() {
   })
 }
 
-export function botaoLive() {
+export function bloquearBotaoLive() {
   botaoCriptoEscutador.setAttribute('disabled', true)
   botaoCriptoEscutador.style.pointerEvents = 'none'
   botaoCriptoEscutador.style.backgroundColor = 'grey'
   botaoCriptoEscutador.style.color = '#f7f7f7'
+
+  botaoDecriptoEscutador.setAttribute('disabled', true)
+  botaoDecriptoEscutador.style.pointerEvents = 'none'
+  botaoDecriptoEscutador.style.backgroundColor = 'grey'
+  botaoDecriptoEscutador.style.color = '#f7f7f7'
 }
