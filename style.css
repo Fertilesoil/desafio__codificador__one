@@ -23,14 +23,47 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-color);
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   display: block;
   max-width: 100%;
+}
+
+.menu {
+  position: absolute;
+  background-color: #8ae0dc69;
+  /* background-image: linear-gradient(30deg, #FA5D50, #FA7B50); */
+  width: 8%;
+  height: 100vh;
+  transition: 1s ease;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.menu img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.hide {
+  transform: translate(-230px);
+  opacity: 0;
 }
 
 .meiuca {
@@ -59,20 +92,21 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* width: 100%; */
   margin-bottom: 1rem;
 }
 
 #logo {
   width: 3rem;
   height: 3rem;
-  opacity: 0.3;
-  transition: 500ms ease-in-out;
+  opacity: 0.7;
+  /* transform: rotate(-270deg); */
+  transition: all 500ms linear;
+  z-index: 10;
 }
 
-#logo:hover {
-  transition: 500ms ease-in-out;
-  transform: translateX(1rem) rotate(90deg);
+.click {
+  transform: translateX(-0.5rem) rotate(-90deg);
+  transition: all 500ms linear;
   opacity: 1;
 }
 
@@ -105,6 +139,10 @@ img {
 }
 
 /* Área do texto */
+.conteudo__principal {
+  position: relative;
+}
+
 .conteudo__central {
   display: flex;
   justify-content: center;
@@ -113,6 +151,7 @@ img {
 }
 
 #text__area__conteudo {
+  overflow-x: hidden;
   height: 15rem;
   width: 40rem;
   min-height: 10rem;
@@ -344,6 +383,17 @@ button:nth-child(2):hover {
   animation-duration: 3s;
 }
 
+.box__images span:nth-child(4) {
+  border-radius: 73% 27% 70% 30% / 30% 74% 26% 70%;
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+
+.box__images span:nth-child(5) {
+  border-radius: 46% 54% 81% 19% / 30% 71% 29% 70%;
+  animation-duration: 4s;
+}
+
 @keyframes gira {
   0% {
     transform: rotate(0deg);
@@ -372,6 +422,7 @@ button:nth-child(2):hover {
 
 #criptografia {
   overflow: auto;
+  overflow-x: hidden;
   resize: none;
   width: 20rem;
   height: 25rem;
