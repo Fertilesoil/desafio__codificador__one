@@ -43,20 +43,6 @@ function encriptarLive(texto) {
   templateAtivoLive(cripto)
 }
 
-// export function decriptarLive(texto) {
-//   if (!texto) return templateVazioLive()
-
-//   let cripto = texto
-//     .replace(/i/g, 'imes')
-//     .replace(/a/g, 'ai')
-//     .replace(/e/g, 'enter')
-//     .replace(/o/g, 'ober')
-//     .replace(/u/g, 'ufat')
-  
-//   templateAtivoLive(cripto)
-//   return texto
-// }
-
 export function textoLive() {
   text.addEventListener('keyup', () => {
     let recebidos = text.value

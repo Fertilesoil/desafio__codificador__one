@@ -4,6 +4,10 @@ export function copia() {
   copiar.addEventListener('click', () => {
     let texto = link.textContent
     navigator.clipboard.writeText(texto).then(() => {
+      copiar.classList.add('active')
+      setTimeout(() => {
+        copiar.classList.remove('active')
+      }, 1000);
     })
   })
 }
