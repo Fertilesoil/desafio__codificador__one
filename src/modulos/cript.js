@@ -65,8 +65,7 @@ export function botaoCripto() {
     let texto = document.querySelector('#text__area__conteudo')
     let recebidos = texto.value
 
-    checarTexto(texto)
-
+    
     encriptar(recebidos)
   })
 }

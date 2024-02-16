@@ -23,8 +23,9 @@ function checar(e) {
 
 export function checarTexto(texto, e) {
  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
+ const conferido = texto.split('').some( char => char.match(regex))
 
- if (texto.split('').every( char => char.match(regex))) {
+ if (conferido === true) {
   textAreaErro();
   e.preventDefault();
   templateVazio();
