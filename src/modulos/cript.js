@@ -1,6 +1,7 @@
 ﻿import { limpaTextArea, templateAtivo, templateAtivoLive } from './activeTemplate'
 import { templateVazio, templateVazioLive } from './emptyTemplate'
 import { text, botaoDecriptoEscutador, botaoCriptoEscutador } from '../utils/frequent'
+import { checarTexto } from './watcher'
 
 export function encriptar(texto) {
   if (!texto) return templateVazio()
@@ -63,6 +64,8 @@ export function botaoCripto() {
   botaoCriptoEscutador.addEventListener('click', () => {
     let texto = document.querySelector('#text__area__conteudo')
     let recebidos = texto.value
+
+    checarTexto(texto)
 
     encriptar(recebidos)
   })
