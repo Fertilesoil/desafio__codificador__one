@@ -1,9 +1,12 @@
 ﻿import { limpaTextArea, templateAtivo, templateAtivoLive } from './activeTemplate'
 import { templateVazio, templateVazioLive } from './emptyTemplate'
 import { text, botaoDecriptoEscutador, botaoCriptoEscutador } from '../utils/frequent'
+import { checarTexto } from './watcher'
 
 export function encriptar(texto) {
   if (!texto) return templateVazio()
+
+  checarTexto(texto)
 
   let cripto = texto
     .replace(/i/g, 'imes')

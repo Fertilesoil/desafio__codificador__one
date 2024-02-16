@@ -7,22 +7,26 @@ export function corretor() {
    e.preventDefault()
   }
  })
-
- text.addEventListener('touchmove', (e) => { 
-  if (checar(e)) {
-   e.preventDefault()
-  }
- })
 }
 
 function checar(e) {
  const caracter = String.fromCharCode(e.keyCode)
 
-  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
+ const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
 
  if (caracter.match(regex)) {
   textAreaErro()
   return true
+ }
+}
+
+export function checarTexto(texto, e) {
+ const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
+
+ if (texto.match(regex)) {
+  textAreaErro();
+  e.preventDefault();
+  return null
  }
 }
 
