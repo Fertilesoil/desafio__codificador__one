@@ -12,9 +12,6 @@ templateVazio()
 copia()
 botaoCripto()
 botaoDecripto()
-text.onchange = () => {
- checarTexto(text.value)
-}
 corretor()
 hideMenu()
 
@@ -23,3 +20,6 @@ hideMenu()
 //  console.log(tutu);
 // })
 
+text.ontouchend = () => {
+ checarTexto(text.value)
+}
