@@ -20,6 +20,10 @@ hideMenu()
 //  console.log(tutu);
 // })
 
-text.ontouchend = () => {
- checarTexto(text.value)
+text.ontouchstart = (e) => {
+ e.preventDefault()
+}
+
+text.ontouchend = (e) => {
+ e.preventDefault()
 }
