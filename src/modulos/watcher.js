@@ -26,8 +26,8 @@ export function checarTexto(texto, e) {
  const conferido = texto.split('').some( char => char.match(regex))
 
  if (conferido === true) {
-  textAreaErro();
   e.preventDefault();
+  textAreaErro();
   templateVazio();
  }
 }
