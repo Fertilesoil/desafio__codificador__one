@@ -8,6 +8,13 @@ export function corretor() {
    e.preventDefault()
   }
  })
+
+ text.oninput = () => {
+  
+  if (checar(e)) {
+   e.preventDefault()
+  }
+ }
 }
 
 function checar(e) {
