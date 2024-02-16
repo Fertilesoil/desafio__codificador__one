@@ -2,9 +2,8 @@
 import { copia } from "./src/modulos/copy"
 import { assegurarBordas, restauraPadrao } from "./src/modulos/ensureDefault"
 import { botaoCripto, botaoDecripto } from "./src/modulos/cript"
-import { checarTexto, corretor } from "./src/modulos/watcher"
+import { corretor } from "./src/modulos/watcher"
 import { hideMenu } from "./src/modulos/menu"
-import { text } from "./src/utils/frequent"
 
 assegurarBordas()
 restauraPadrao()
@@ -24,7 +23,7 @@ hideMenu()
 //  e.preventDefault()
 // }
 
-text.ontouchend = (e) => {
- corretor();
- e.preventDefault();
-};
+// text.ontouchend = (e) => {
+//  corretor();
+//  e.preventDefault();
+// };

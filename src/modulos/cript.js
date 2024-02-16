@@ -1,7 +1,8 @@
 ﻿import { limpaTextArea, templateAtivo, templateAtivoLive } from './activeTemplate'
 import { templateVazio, templateVazioLive } from './emptyTemplate'
 import { text, botaoDecriptoEscutador, botaoCriptoEscutador } from '../utils/frequent'
-import { checarTexto } from './watcher'
+import { textAreaErro } from './watcher'
+
 
 export function encriptar(texto) {
   if (!texto) return templateVazio()
@@ -61,12 +62,19 @@ export function textoLiveDecripto() {
 }
 
 export function botaoCripto() {
-  botaoCriptoEscutador.addEventListener('click', () => {
+  botaoCriptoEscutador.addEventListener('click', (e) => {
     let texto = document.querySelector('#text__area__conteudo')
+    const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
     let recebidos = texto.value
 
+    if (regex.test(recebidos)) {
+      encriptar(recebidos)
+    } else {
+      e.preventDefault()
+      limpaTextArea()
+      textAreaErro()
+    }
 
-    encriptar(recebidos)
   })
 }
 

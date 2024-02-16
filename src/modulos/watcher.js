@@ -32,7 +32,7 @@ export function checarTexto(texto, e) {
  }
 }
 
-function textAreaErro() {
+export function textAreaErro() {
  p.innerHTML = `
   <p class="aviso__erro">Apenas letras minúsculas e sem acento</p>
   `
