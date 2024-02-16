@@ -25,9 +25,9 @@ export function checarTexto(texto, e) {
  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
 
  if (texto.split('').every( char => char.match(regex))) {
-  e.preventDefault();
   textAreaErro();
-  // templateVazio();
+  e.preventDefault();
+  templateVazio();
  }
 }
 
