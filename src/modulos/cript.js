@@ -67,12 +67,12 @@ export function botaoCripto() {
     const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
     let recebidos = texto.value
 
-    if (!regex.test(recebidos)) {
-      encriptar(recebidos)
-    } else {
+    if (!regex.test(texto.value)) {
       e.preventDefault()
       limpaTextArea()
       textAreaErro()
+    } else {
+      encriptar(recebidos)
     }
 
     console.log(recebidos);
