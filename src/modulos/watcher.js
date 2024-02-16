@@ -1,4 +1,5 @@
 ﻿import { text, p } from "../utils/frequent"
+import { templateVazio } from "./emptyTemplate"
 
 export function corretor() {
  text.addEventListener('keypress', (e) => {
@@ -23,10 +24,10 @@ function checar(e) {
 export function checarTexto(texto, e) {
  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
 
- if (regex.test(texto)) {
-  textAreaErro();
+ if (texto.split('').every( char => regex.includes(char))) {
   e.preventDefault();
-  return null
+  textAreaErro();
+  templateVazio();
  }
 }
 
