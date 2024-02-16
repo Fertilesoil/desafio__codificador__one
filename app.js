@@ -20,6 +20,3 @@ hideMenu()
 //  console.log(tutu);
 // })
 
-text.onchange = () => {
-checarTexto(text.value)
-}

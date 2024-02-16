@@ -6,6 +6,10 @@ import { checarTexto } from './watcher'
 export function encriptar(texto) {
   if (!texto) return templateVazio()
 
+  text.onchange = () => {
+    checarTexto(text.value)
+  }
+
   let cripto = texto
     .replace(/i/g, 'imes')
     .replace(/a/g, 'ai')
@@ -65,7 +69,7 @@ export function botaoCripto() {
     let texto = document.querySelector('#text__area__conteudo')
     let recebidos = texto.value
 
-    
+
     encriptar(recebidos)
   })
 }
