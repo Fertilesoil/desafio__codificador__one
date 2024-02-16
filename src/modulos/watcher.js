@@ -7,6 +7,12 @@ export function corretor() {
    e.preventDefault()
   }
  })
+
+ text.addEventListener('touchmove', (e) => { 
+  if (checar(e)) {
+   e.preventDefault()
+  }
+ })
 }
 
 function checar(e) {
