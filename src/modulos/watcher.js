@@ -8,13 +8,6 @@ export function corretor() {
    e.preventDefault()
   }
  })
-
- text.oninput = () => {
-  
-  if (checar(e)) {
-   e.preventDefault()
-  }
- }
 }
 
 function checar(e) {
@@ -28,18 +21,7 @@ function checar(e) {
  }
 }
 
-export function checarTexto(texto, e) {
- const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
- const conferido = texto.split('').some( char => char.match(regex))
-
- if (conferido === true) {
-  e.preventDefault();
-  textAreaErro();
-  templateVazio();
- }
-}
-
-export function textAreaErro() {
+function textAreaErro() {
  p.innerHTML = `
   <p class="aviso__erro">Apenas letras minúsculas e sem acento</p>
   `
