@@ -24,10 +24,10 @@ function checar(e) {
 export function checarTexto(texto, e) {
  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
 
- if (texto.split('').every( char => regex.includes(char))) {
+ if (texto.split('').every( char => char.match(regex))) {
   e.preventDefault();
   textAreaErro();
-  templateVazio();
+  // templateVazio();
  }
 }
 
