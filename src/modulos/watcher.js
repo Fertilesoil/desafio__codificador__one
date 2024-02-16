@@ -27,8 +27,12 @@ export function checarTexto(texto, e) {
 
  if (conferido === true) {
   e.preventDefault();
-  textAreaErro();
-  templateVazio();
+  // textAreaErro();
+  // templateVazio();
+ }
+ return {
+  textAreaErro,
+  templateVazio
  }
 }
 

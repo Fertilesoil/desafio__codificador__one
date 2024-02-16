@@ -12,6 +12,9 @@ templateVazio()
 copia()
 botaoCripto()
 botaoDecripto()
+text.onchange = () => {
+ checarTexto(text.value)
+}
 corretor()
 hideMenu()
 
