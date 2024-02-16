@@ -23,7 +23,7 @@ function checar(e) {
 export function checarTexto(texto, e) {
  const regex = /^[A-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ~´`^¨']+$/
 
- if (texto.match(regex)) {
+ if (regex.test(texto)) {
   textAreaErro();
   e.preventDefault();
   return null
