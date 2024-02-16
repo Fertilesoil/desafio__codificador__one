@@ -20,10 +20,10 @@ hideMenu()
 //  console.log(tutu);
 // })
 
-text.ontouchstart = (e) => {
- e.preventDefault()
-}
+// text.ontouchstart = (e) => {
+//  e.preventDefault()
+// }
 
-text.ontouchend = (e) => {
- e.preventDefault()
-}
+// text.ontouchend = (e) => {
+//  e.preventDefault()
+// }
