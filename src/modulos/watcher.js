@@ -1,5 +1,4 @@
 ﻿import { text, p } from "../utils/frequent"
-import { templateVazio } from "./emptyTemplate"
 
 export function corretor() {
  text.addEventListener('keypress', (e) => {
